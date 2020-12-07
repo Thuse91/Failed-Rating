@@ -1,0 +1,72 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+
+
+body {
+    background-color: white;
+}
+
+.star-container {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+    left: -4px;
+}
+
+.one-star,
+.two-star,
+.three-star,
+.four-star,
+.five-star {
+    flex:1;
+}
+#one,
+#two,
+#three,
+#four,
+#five {
+    cursor: pointer;
+}
+
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container > * {
+    width: 100%;
+}
+
+#progressBar {
+    width: 7.0rem;
+    height: 1.3rem;
+
+    background-color: #fff;
+    position: relative;
+    margin: 0;
+}
+
+#progressBarFull {
+    position: absolute;
+    left: 0;
+    height: 1.3rem;
+    background-color: rgb(251, 255, 15);
+    width: 0%;
+}
+
