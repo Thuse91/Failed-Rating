@@ -1,24 +1,13 @@
-
 let voteCounter = 0;
 let maxVotes = 0;
 
-
-let fourHalf = maxVotes / 100 * 95;
-let four = maxVotes / 100 * 85;
-let threeHalf = maxVotes / 100 * 75;
-let three = maxVotes / 100 * 65;
-let twoHalf = maxVotes / 100 * 55;
-let two = maxVotes / 100 * 45;
-let oneHalf = maxVotes / 100 * 35;
-let one = maxVotes / 100 * 25;
-let half = maxVotes / 100 * 15;
-let zero = maxVotes / 100 * 5;
 
 function oneCalc() {
     voteCounter += 1;
     maxVotes += 5;
     console.log(voteCounter)
     console.log(maxVotes)
+    this.score();
 }
 
 function twoCalc() {
@@ -26,6 +15,7 @@ function twoCalc() {
     maxVotes += 5;
     console.log(voteCounter)
     console.log(maxVotes)
+    this.score();
 }
 
 function threeCalc() {
@@ -33,6 +23,7 @@ function threeCalc() {
     maxVotes += 5;
     console.log(voteCounter)
     console.log(maxVotes)
+    this.score();
 }
 
 function fourCalc() {
@@ -40,6 +31,7 @@ function fourCalc() {
     maxVotes += 5;
     console.log(voteCounter)
     console.log(maxVotes)
+    this.score();
 }
 
 function fiveCalc() {
@@ -47,6 +39,31 @@ function fiveCalc() {
     maxVotes += 5;
     console.log(voteCounter)
     console.log(maxVotes)
+    this.score();
+}
+
+
+function wipe() {
+    document.querySelector("#one-full").style.display = "none"
+    document.querySelector("#two-full").style.display = "none"
+    document.querySelector("#three-full").style.display = "none"
+    document.querySelector("#four-full").style.display = "none"
+    document.querySelector("#five-full").style.display = "none"
+    document.querySelector("#one").style.display = "none"
+    document.querySelector("#one").style.left = "0px"
+    document.querySelector("#two").style.display = "none"
+    document.querySelector("#two").style.left = "0px"
+    document.querySelector("#three").style.display = "none"
+    document.querySelector("#three").style.left = "0px"
+    document.querySelector("#four").style.display = "none"
+    document.querySelector("#four").style.left = "0px"
+    document.querySelector("#five").style.display = "none"
+    document.querySelector("#five").style.left = "0px"
+    document.querySelector("#one-half").style.display = "none"
+    document.querySelector("#two-half").style.display = "none"
+    document.querySelector("#three-half").style.display = "none"
+    document.querySelector("#four-half").style.display = "none"
+    document.querySelector("#five-half").style.display = "none"
 }
 
 
@@ -54,8 +71,13 @@ function fiveCalc() {
 
 
 
+
+
+
+
 function score(){
-    if (voteCounter >= fourHalf) {
+    if (voteCounter >= maxVotes / 100 * 95) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "block"
@@ -71,9 +93,12 @@ function score(){
         document.querySelector("#three-half").style.display = "none"
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
-        console.log(fourHalf)
+        console.log("5")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= four) {
+    else if (voteCounter >= maxVotes / 100 * 85) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "block"
@@ -90,8 +115,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "block"
         console.log("4.5")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= threeHalf) {
+    else if (voteCounter >= maxVotes / 100 * 75) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "block"
@@ -108,8 +136,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("4")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= three) {
+    else if (voteCounter >= maxVotes / 100 * 65) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "block"
@@ -127,8 +158,11 @@ function score(){
         document.querySelector("#four-half").style.display = "block"
         document.querySelector("#five-half").style.display = "none"
         console.log("3.5")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= twoHalf) {
+    else if (voteCounter >= maxVotes / 100 * 55) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "block"
@@ -146,8 +180,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("3")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= two) {
+    else if (voteCounter >= maxVotes / 100 * 45) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "none"
@@ -166,8 +203,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("2.5")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= oneHalf) {
+    else if (voteCounter >= maxVotes / 100 * 35) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "block"
         document.querySelector("#three-full").style.display = "none"
@@ -186,9 +226,12 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("2")
+        console.log(voteCounter)
+        console.log(maxVotes)
 
     }
-    else if (voteCounter >= one) {
+    else if (voteCounter >= maxVotes / 100 * 25) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "none"
         document.querySelector("#three-full").style.display = "none"
@@ -208,8 +251,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("1.5")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= half) {
+    else if (voteCounter >= maxVotes / 100 * 15) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "block"
         document.querySelector("#two-full").style.display = "none"
         document.querySelector("#three-full").style.display = "none"
@@ -229,8 +275,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("1")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter >= zero) {
+    else if (voteCounter >= maxVotes / 100 * 5) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "none"
         document.querySelector("#two-full").style.display = "none"
         document.querySelector("#three-full").style.display = "none"
@@ -251,8 +300,11 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("halv")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
-    else if (voteCounter < zero) {
+    else if (voteCounter < maxVotes / 100 * 5) {
+        this.wipe();
         document.querySelector("#one-full").style.display = "none"
         document.querySelector("#two-full").style.display = "none"
         document.querySelector("#three-full").style.display = "none"
@@ -273,6 +325,8 @@ function score(){
         document.querySelector("#four-half").style.display = "none"
         document.querySelector("#five-half").style.display = "none"
         console.log("noll")
+        console.log(voteCounter)
+        console.log(maxVotes)
     }
     console.log("test")
 }
