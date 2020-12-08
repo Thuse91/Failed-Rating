@@ -1,0 +1,58 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.star-container {
+    display: flex;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+#one-full,
+#one-half,
+#two-full,
+#two-half,
+#three-full,
+#three-half,
+#four-full,
+#four-half,
+#five-full,
+#five-half {
+    display: none;
+}
+
+#one-half,
+#two-half,
+#three-half,
+#four-half,
+#five-half {
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five {
+    position: absolute;
+    top:0;
+    left: 0;
+}
